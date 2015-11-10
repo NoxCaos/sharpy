@@ -4,6 +4,8 @@ namespace SharpyExamples {
 
     // Or you can event extend EventManager, to add all these abilieties to your own object
     public class MyPlayer : Sharpy.EventManager {
+        public float x;
+        public float y;
 
         public MyPlayer() : base() {
             this.x = 0;
@@ -45,7 +47,7 @@ namespace SharpyExamples {
                 var obj = (PlayerEvent) e;
 
                 // Get (set) your event object data
-                if (obj.x == 42 && obj.y == 42) {
+                if (obj.player.x == 42 && obj.player.y == 42) {
                     // Player is in the perfect spot :)
                 }
 
